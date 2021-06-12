@@ -4,8 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
@@ -14,11 +13,17 @@ import javax.persistence.Id;
 public class Rent {
     @Id
     private String rentID;
-    private boolean isDriver;
     private String pickUpDate;
     private String pickOffDate;
     private String status;
     private String reason;
     private double totalFee;
     private String date;
+    @ManyToOne()
+    @JoinColumn(name = "customer_",referencedColumnName = "customerID")
+    private Customer customer;
+    @ManyToOne()
+    @JoinColumn(name = "vehicle_",referencedColumnName = "vehicleID")
+    private Vehicle vehicle;
 }
+

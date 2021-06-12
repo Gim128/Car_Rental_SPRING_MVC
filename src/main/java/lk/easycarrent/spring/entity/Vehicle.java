@@ -4,8 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -14,20 +17,22 @@ import javax.persistence.Id;
 
 public class Vehicle {
     @Id
-    private  String vehicleID;
-    private  String brand;
-    private  String model;
-    private  String type;
-    private  String frontView;
-    private  String backView;
-    private  String sideView;
-    private  String interiorView;
-    private  double regNo;
-    private  String color;
-    private  String transmissionType;
-    private  String fuelType;
-    private  double dailyRent;
-    private  double monthlyRent;
-    private  String dailyKm;
+    private String vehicleID;
+    private String brand;
+    private String model;
+    private String type;
+    private double extraFee;
+    private String regNumber;
+    private String color;
+    private String passNumber;
+    private String transmissionType;
+    private String fuelType;
+    private double dailyRent;
+    private double monthlyRent;
+    private String dailyKM;
+    private String monthlyKM;
+    @OneToMany(mappedBy = "vehicle",cascade = {CascadeType.ALL})
+    private List<Rent> rentOrder;
 
 }
+
