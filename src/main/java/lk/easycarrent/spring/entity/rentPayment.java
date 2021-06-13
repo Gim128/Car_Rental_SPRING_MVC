@@ -15,6 +15,6 @@ public class rentPayment {
     @Id
     private String rentID;
     private String date;
-    private double Ffee;
+    private double fee;
     private String method;
 }

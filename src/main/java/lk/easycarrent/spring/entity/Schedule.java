@@ -8,16 +8,16 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-//@Entity
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Damage {
+public class Schedule {
     @Id
-    private String damageID;
-    private double returnFee;
-    private String reason;
-    @OneToOne()
-    private Returns returnsID;
-
+    private String scheduleID;
+    @OneToOne
+    private Rent rentID;
+    @OneToOne
+    private Driver driverID;
 }
+

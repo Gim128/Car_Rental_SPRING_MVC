@@ -20,10 +20,14 @@ public class Rent {
     private double totalFee;
     private String date;
     @ManyToOne()
-    @JoinColumn(name = "customer_",referencedColumnName = "customerID")
+    @JoinColumn(name = "customerID",referencedColumnName = "customerID")
     private Customer customer;
     @ManyToOne()
-    @JoinColumn(name = "vehicle_",referencedColumnName = "vehicleID")
+    @JoinColumn(name = "vehicleID",referencedColumnName = "vehicleID")
     private Vehicle vehicle;
+    @ManyToOne()
+    @JoinColumn(name = "driverID",referencedColumnName = "driverID")
+    private Driver driver;
+
 }
 
