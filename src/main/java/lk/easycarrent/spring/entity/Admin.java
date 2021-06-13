@@ -11,10 +11,13 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Users {
+public class Admin {
     @Id
-    private String userID;
-    private String userName;
-    private String password;
-    private String role;
+    private String adminID;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String contactNumber;
+    private String nic;
 }
+
