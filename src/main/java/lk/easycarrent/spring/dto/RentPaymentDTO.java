@@ -10,7 +10,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Data
 public class RentPaymentDTO {
-    @Id
+
     private String rentID;
     private String date;
     private double fee;

@@ -10,7 +10,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Data
 public class UsersDTO {
-    @Id
+
     private String userID;
     private String userName;
     private String password;

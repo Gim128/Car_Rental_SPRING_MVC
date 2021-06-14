@@ -12,11 +12,11 @@ import javax.persistence.OneToOne;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class SheduleDTO {
-    @Id
+public class ScheduleDTO {
+
     private String scheduleID;
-    @OneToOne
+
     private Rent rentID;
-    @OneToOne
+
     private Driver driverID;
 }

@@ -1,6 +1,6 @@
 package lk.easycarrent.spring.service.impl;
 
-import lk.easycarrent.spring.Exception.ValidateException;
+import lk.easycarrent.spring.exception.ValidateException;
 import lk.easycarrent.spring.dto.CustomerDTO;
 import lk.easycarrent.spring.entity.Customer;
 import lk.easycarrent.spring.repo.CustomerRepo;

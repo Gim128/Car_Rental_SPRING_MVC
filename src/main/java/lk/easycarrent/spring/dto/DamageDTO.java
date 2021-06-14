@@ -13,10 +13,10 @@ import javax.persistence.OneToOne;
 @Data
 
 public class DamageDTO {
-    @Id
+
     private String damageID;
     private double returnFee;
     private String reason;
-    @OneToOne()
     private Returns returnsID;
+
 }

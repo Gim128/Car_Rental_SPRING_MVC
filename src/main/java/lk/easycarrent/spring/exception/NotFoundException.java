@@ -1,4 +1,4 @@
-package lk.easycarrent.spring.Exception;
+package lk.easycarrent.spring.exception;
 
 public class NotFoundException extends RuntimeException{
     public NotFoundException(String message) {

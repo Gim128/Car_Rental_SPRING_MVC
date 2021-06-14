@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 public class VehicleDTO {
-    @Id
+
     private String vehicleID;
     private String brand;
     private String model;
@@ -29,6 +29,6 @@ public class VehicleDTO {
     private double monthlyRent;
     private String dailyKM;
     private String monthlyKM;
-    @OneToMany(mappedBy = "vehicle",cascade = {CascadeType.ALL})
-    private List<Rent> rentOrder;
+
+    private List<RentDTO> rentOrder;
 }

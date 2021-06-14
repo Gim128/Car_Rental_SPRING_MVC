@@ -22,6 +22,6 @@ public class CustomerDTO {
     private String driveLicenseNumber;
     private String address;
     private String contactNumber;
-    @OneToMany(mappedBy = "customer",cascade = {CascadeType.ALL})
-    private List<Rent> rentOrder;
+
+    private List<RentDTO> rentOrder;
 }

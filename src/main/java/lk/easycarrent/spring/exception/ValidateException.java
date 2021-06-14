@@ -1,4 +1,4 @@
-package lk.easycarrent.spring.Exception;
+package lk.easycarrent.spring.exception;
 
 public class ValidateException extends RuntimeException{
     public ValidateException(String message) {

@@ -10,7 +10,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Data
 public class ReturnsDTO {
-    @Id
+
     private  String returnID;
     private  String returnFee;
     private  String reason;

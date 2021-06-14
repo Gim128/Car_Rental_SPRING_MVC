@@ -1,6 +1,6 @@
 package lk.easycarrent.spring.controller;
 
-import lk.easycarrent.spring.Exception.NotFoundException;
+import lk.easycarrent.spring.exception.NotFoundException;
 import lk.easycarrent.spring.dto.CustomerDTO;
 import lk.easycarrent.spring.service.CustomerService;
 import lk.easycarrent.spring.util.StandardResponce;

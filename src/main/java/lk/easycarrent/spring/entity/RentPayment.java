@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class rentPayment {
+public class RentPayment {
     @Id
     private String rentID;
     private String date;

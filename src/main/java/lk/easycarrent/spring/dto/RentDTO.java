@@ -23,13 +23,10 @@ public class RentDTO {
     private String reason;
     private double totalFee;
     private String date;
-    @ManyToOne()
-    @JoinColumn(name = "customerID",referencedColumnName = "customerID")
-    private Customer customer;
-    @ManyToOne()
-    @JoinColumn(name = "vehicleID",referencedColumnName = "vehicleID")
-    private Vehicle vehicle;
-    @ManyToOne()
-    @JoinColumn(name = "driverID",referencedColumnName = "driverID")
-    private Driver driver;
+
+    private CustomerDTO customerDTO;
+
+    private VehicleDTO vehicleDTOe;
+
+    private DriverDTO driverDTO;
 }

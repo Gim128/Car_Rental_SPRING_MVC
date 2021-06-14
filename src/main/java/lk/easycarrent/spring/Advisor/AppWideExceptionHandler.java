@@ -1,8 +1,8 @@
 package lk.easycarrent.spring.Advisor;
 
 
-import lk.easycarrent.spring.Exception.NotFoundException;
-import lk.easycarrent.spring.Exception.ValidateException;
+import lk.easycarrent.spring.exception.NotFoundException;
+import lk.easycarrent.spring.exception.ValidateException;
 import lk.easycarrent.spring.util.StandardResponce;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
