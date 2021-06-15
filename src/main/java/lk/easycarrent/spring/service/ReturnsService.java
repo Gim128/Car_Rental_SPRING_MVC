@@ -5,7 +5,7 @@ import lk.easycarrent.spring.dto.ReturnsDTO;
 
 import java.util.ArrayList;
 
-public interface ReturnService {
+public interface ReturnsService {
     void addReturn(ReturnsDTO dto);
 
     void deleteReturn(String id);

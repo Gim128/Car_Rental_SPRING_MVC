@@ -5,7 +5,7 @@ import lk.easycarrent.spring.dto.ReturnsDTO;
 import lk.easycarrent.spring.dto.VehicleDTO;
 import lk.easycarrent.spring.entity.Returns;
 import lk.easycarrent.spring.repo.ReturnsRepo;
-import lk.easycarrent.spring.service.ReturnService;
+import lk.easycarrent.spring.service.ReturnsService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import java.util.Optional;
 @Service
 @Transactional
 
-public class ReturnServiceimpl implements ReturnService {
+public class ReturnsServiceimpl implements ReturnsService {
 
     @Autowired
     private ReturnsRepo returnsRepo;
