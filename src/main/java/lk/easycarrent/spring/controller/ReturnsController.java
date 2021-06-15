@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/easycarrent/return")
 
@@ -20,7 +21,7 @@ public class ReturnsController {
     @Autowired
     private ReturnsService returnsService ;
 
-    @GetMapping(path = "search")
+    @GetMapping(path = "search/{id}")
     public ResponseEntity searchReturns(String id){
         ReturnsDTO returnsDTO = returnsService.searchReturn(id);
         return new ResponseEntity(new StandardResponce("200", "Done", returnsDTO), HttpStatus.OK);

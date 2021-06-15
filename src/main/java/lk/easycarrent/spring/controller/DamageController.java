@@ -13,13 +13,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/easycarrent/damage")
 public class DamageController {
     @Autowired
     private DamageService damageService ;
 
-    @GetMapping(path = "search")
+    @GetMapping(path = "search/{id}")
     public ResponseEntity searchDamage(String id){
         DamageDTO damageDTO = damageService.searchDamage(id);
         return new ResponseEntity(new StandardResponce("200", "Done", damageDTO), HttpStatus.OK);

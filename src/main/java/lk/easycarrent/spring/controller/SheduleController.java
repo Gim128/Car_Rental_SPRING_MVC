@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/easycarrent/schedule")
 
@@ -21,7 +22,7 @@ public class SheduleController {
     @Autowired
     private ScheduleService scheduleService ;
 
-    @GetMapping(path = "search")
+    @GetMapping(path = "search/{id}")
     public ResponseEntity searchSchedule(String id){
         ScheduleDTO scheduleDTO = scheduleService.searchSchedule(id);
         return new ResponseEntity(new StandardResponce("200", "Done", scheduleDTO), HttpStatus.OK);

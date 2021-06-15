@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/easycarrent/rentpayment")
 
@@ -20,7 +21,7 @@ public class RentPaymentController {
     @Autowired
     private RentPaymentService rentPaymentService ;
 
-    @GetMapping(path = "search")
+    @GetMapping(path = "search/{id}")
     public ResponseEntity searchRentPayment(String id){
         RentPaymentDTO rentPaymentDTO = rentPaymentService.searchRentPayment(id);
         return new ResponseEntity(new StandardResponce("200", "Done", rentPaymentDTO), HttpStatus.OK);

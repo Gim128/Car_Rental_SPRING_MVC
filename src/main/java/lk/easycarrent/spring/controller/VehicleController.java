@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/easycarrent/vehicle")
 public class VehicleController {
@@ -18,7 +19,7 @@ public class VehicleController {
     @Autowired
     private VehicleService service;
 
-    @GetMapping(path = "search")
+    @GetMapping(path = "search/{id}")
     public ResponseEntity searchVehicle(String id) {
         VehicleDTO dto = service.searchVehicle(id);
         return new ResponseEntity(new StandardResponce("200", "Done", dto), HttpStatus.OK);

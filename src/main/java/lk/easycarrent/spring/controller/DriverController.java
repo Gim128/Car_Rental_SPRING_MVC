@@ -14,13 +14,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/easycarrent/driver")
 public class DriverController {
     @Autowired
     private DriverService driverService ;
 
-    @GetMapping(path = "search")
+    @GetMapping(path = "search/{id}")
     public ResponseEntity searchDriver(String id){
         DriverDTO driverDTO = driverService.searchDriver(id);
         return new ResponseEntity(new StandardResponce("200", "Done", driverDTO), HttpStatus.OK);

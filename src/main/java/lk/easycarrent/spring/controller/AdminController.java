@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/easycarrent/admin")
 public class AdminController {
@@ -19,7 +20,7 @@ public class AdminController {
     @Autowired
     private AdminService service;
 
-    @GetMapping(path = "search")
+    @GetMapping(path = "search/{id}")
     public ResponseEntity searchAdmin(String id) {
         AdminDTO dto = service.searchAdmin(id);
         return new ResponseEntity(new StandardResponce("200", "Done", dto), HttpStatus.OK);

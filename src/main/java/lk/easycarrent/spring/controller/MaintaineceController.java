@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/easycarrent/maintainece")
 
@@ -21,7 +22,7 @@ public class MaintaineceController {
     @Autowired
     private MaintaineceService maintaineceService ;
 
-    @GetMapping(path = "search")
+    @GetMapping(path = "search/{id}")
     public ResponseEntity searchMaintainece(String id){
         MaintaineceDTO maintaineceDTO = maintaineceService.searchMaintainece(id);
         return new ResponseEntity(new StandardResponce("200", "Done", maintaineceDTO), HttpStatus.OK);

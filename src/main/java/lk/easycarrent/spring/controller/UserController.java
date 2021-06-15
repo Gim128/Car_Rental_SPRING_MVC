@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/easycarrent/users")
 
@@ -21,7 +22,7 @@ public class UserController {
     @Autowired
     private UsersService usersService ;
 
-    @GetMapping(path = "search")
+    @GetMapping(path = "search/{id}")
     public ResponseEntity searchUsers(String id){
         UsersDTO usersDTO = usersService.searchUsers(id);
         return new ResponseEntity(new StandardResponce("200", "Done", usersDTO), HttpStatus.OK);
